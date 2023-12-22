@@ -308,15 +308,14 @@
 			</div>
 		</div>
 	</footer>
-<!--	<iframe src="audio/christmas.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe>-->
-	<audio id="myAudio" controls autoplay>
+	<audio loop autoplay controls hidden id="audioelement">
+		<source src="audio/christmas.ogg" type="audio/ogg">
 		<source src="audio/christmas.mp3" type="audio/mp3">
 	</audio>
 	<!-- End Footer -->
 	
 	<a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
-
-	<button onclick="playAudio()">Play Audio</button>
+<!--	<button id="playAudio" onclick="PlayAudio()">PlayAudio</button>-->
 	<!-- ALL JS FILES -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/popper.min.js"></script>
@@ -331,14 +330,5 @@
 	<script src="js/isotope.min.js"></script>	
 	<script src="js/images-loded.min.js"></script>	
     <script src="js/custom.js"></script>
-	<script>
-		function playAudio() {
-			var audio = document.getElementById("myAudio");
-			audio.play();
-		}
-		$(document).ready(function(){
-			playAudio();
-		});
-	</script>
 </body>
 </html>
